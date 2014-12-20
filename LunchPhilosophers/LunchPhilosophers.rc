@@ -1,0 +1,265 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP              BITMAP                  "rsc\\meBMP.bmp"
+IDB_BITMAP_TABLE        BITMAP                  "rsc\\table_brush.bmp"
+IDB_BITMAP_CHICKEN      BITMAP                  "rsc\\chicken.bmp"
+IDB_BITMAP_PLUTKA       BITMAP                  "rsc\\plutka.bmp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_LUNCHPHILOSOPHERS   ICON                    "LunchPhilosophers.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_LUNCHPHILOSOPHERS MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Lunch Philosophers"
+    BEGIN
+        MENUITEM "Start",                       IDM_START
+        MENUITEM "Stop",                        IDM_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "Pause",                       IDM_PAUSE
+        MENUITEM "Resume",                      IDM_RESUME
+        MENUITEM SEPARATOR
+        MENUITEM "&Setting ...",                IDM_SETTING
+    END
+    POPUP "&Console"
+    BEGIN
+        MENUITEM "Alloc",                       IDM_ALLOC_CONSOLE
+        MENUITEM "Free",                        IDM_FREE_CONSOLE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_LUNCHPHILOSOPHERS ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 318, 171
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "About LunchPhilosophers"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Five silent philosophers sitting around a",IDC_STATIC,176,7,126,8
+    LTEXT           "round table in front of each philosopher ",IDC_STATIC,176,17,128,8
+    LTEXT           "worth a plate of spaghetti. Fork on the  ",IDC_STATIC,176,27,126,8
+    LTEXT           "table between each pair of nearest philo-",IDC_STATIC,176,37,140,8
+    LTEXT           "sophers. Each philosopher can either eat ",IDC_STATIC,176,47,140,8
+    LTEXT           "or meditate. Philosopher can eat only wh-",IDC_STATIC,176,57,140,8
+    LTEXT           "en holding two forks - to take the right ",IDC_STATIC,176,67,128,8
+    LTEXT           "and left. Each philosopher can take the  ",IDC_STATIC,176,77,128,8
+    LTEXT           "nearest fork ( if available ), or put if he",IDC_STATIC,176,87,140,8
+    LTEXT           "already holds it. The essence of the pro-",IDC_STATIC,176,97,130,8
+    LTEXT           "blem is to develop a model of behavior   ",IDC_STATIC,176,107,142,8
+    LTEXT           "(parallel algorithm) in which none of the",IDC_STATIC,176,117,130,8
+    LTEXT           "philosophers will not starve, that is forever alternate meal and reflection.",IDC_STATIC,8,127,300,8
+    CONTROL         129,IDC_STATIC,"Static",SS_BITMAP,7,7,161,113
+    DEFPUSHBUTTON   "OK",IDOK,120,139,90,14,WS_GROUP
+    GROUPBOX        "",IDC_STATIC,6,0,306,138
+    LTEXT           "Copyright (C) 2014   Email: vasja.prokopets@gmail.com",IDC_STATIC,75,158,183,8
+    GROUPBOX        "",IDC_STATIC,6,151,306,18
+END
+
+IDD_SETTINGBOX DIALOGEX 0, 0, 331, 279
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setting LunchPhilosophers"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,114,258,50,14,WS_GROUP
+    GROUPBOX        "PHILOSOPHER #1",IDC_STATIC,1,2,329,45,BS_CENTER
+    CONTROL         "",IDC_SLIDER_11,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,8,26,118,11,WS_EX_TRANSPARENT
+    LTEXT           "",IDC_STATIC,233,60,8,8
+    GROUPBOX        "Timeout Thinking",IDC_STATIC,5,12,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_11,126,25,30,8
+    CONTROL         "",IDC_SLIDER_12,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,168,25,118,11,WS_EX_TRANSPARENT
+    GROUPBOX        "Timeout Eating",IDC_STATIC,166,12,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_12,288,25,30,8
+    GROUPBOX        "PHILOSOPHER #2",IDC_STATIC,1,51,329,45,BS_CENTER
+    CONTROL         "",IDC_SLIDER_21,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,8,75,118,11,WS_EX_TRANSPARENT
+    GROUPBOX        "Timeout Thinking",IDC_STATIC,5,62,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_21,126,75,30,8
+    CONTROL         "",IDC_SLIDER_22,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,168,75,118,11,WS_EX_TRANSPARENT
+    GROUPBOX        "Timeout Eating",IDC_STATIC,166,62,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_22,288,75,30,8
+    GROUPBOX        "PHILOSOPHER #3",IDC_STATIC,1,100,329,45,BS_CENTER
+    CONTROL         "",IDC_SLIDER_31,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,8,124,118,11,WS_EX_TRANSPARENT
+    GROUPBOX        "Timeout Thinking",IDC_STATIC,5,111,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_31,126,124,30,8
+    CONTROL         "",IDC_SLIDER_32,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,168,124,118,11,WS_EX_TRANSPARENT
+    GROUPBOX        "Timeout Eating",IDC_STATIC,166,111,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_32,288,124,30,8
+    GROUPBOX        "PHILOSOPHER #4",IDC_STATIC,1,154,329,45,BS_CENTER
+    CONTROL         "",IDC_SLIDER_41,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,8,178,118,11,WS_EX_TRANSPARENT
+    GROUPBOX        "Timeout Thinking",IDC_STATIC,5,165,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_41,126,178,30,8
+    CONTROL         "",IDC_SLIDER_42,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,168,178,118,11,WS_EX_TRANSPARENT
+    GROUPBOX        "Timeout Eating",IDC_STATIC,166,165,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_42,288,178,30,8
+    GROUPBOX        "PHILOSOPHER #5",IDC_STATIC,1,208,329,45,BS_CENTER
+    CONTROL         "",IDC_SLIDER_51,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,8,232,118,11,WS_EX_TRANSPARENT
+    GROUPBOX        "Timeout Thinking",IDC_STATIC,5,219,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_51,126,232,30,8
+    CONTROL         "",IDC_SLIDER_52,"msctls_trackbar32",TBS_NOTICKS | TBS_TOOLTIPS | WS_TABSTOP,168,232,118,11,WS_EX_TRANSPARENT
+    GROUPBOX        "Timeout Eating",IDC_STATIC,166,219,157,30,BS_LEFT
+    LTEXT           "0",IDC_STATIC_52,288,232,30,8
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,165,258,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_SETTINGBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 327
+        BOTTOMMARGIN, 272
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "LunchPhilosophers"
+    IDC_LUNCHPHILOSOPHERS   "LUNCHPHILOSOPHERS"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
